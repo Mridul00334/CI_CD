@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 const SECRET_TOKEN = 'your_secret_token_here';
 
 // Path to your bash script
-const BASH_SCRIPT_PATH = './deploy_docker.sh';
+const BASH_SCRIPT_PATH = '/host/ubuntu/deploy_docker.sh';  // Path inside the container
+
 
 // Webhook route
 app.post('/webhook/admin-backend', (req, res) => {
