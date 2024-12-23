@@ -13,10 +13,10 @@ app.use(bodyParser.json());
 const SECRET_TOKEN = 'your_secret_token_here';
 
 // Path to your bash script
-const BASH_SCRIPT_PATH = '/path/to/your/script.sh';
+const BASH_SCRIPT_PATH = './deploy_docker.sh';
 
 // Webhook route
-app.post('/webhook', (req, res) => {
+app.post('/webhook/admin-backend', (req, res) => {
   // Verify the webhook signature (optional but recommended for security)
   const signature = req.headers['x-hub-signature-256'];
 
